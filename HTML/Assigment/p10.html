@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Employee Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .section-title {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-row .form-group {
+            flex-basis: 48%;
+        }
+        .form-group input[type="radio"] {
+            width: auto;
+        }
+        .required {
+            color: red;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>New Employee Details Form</h1>
+
+    <form action="">
+        <div class="section-title">Personal Details</div>
+
+        <div class="form-group">
+            <label for="title">Title <span class="required">*</span></label>
+            <select name="title" id="title" required>
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Ms">Ms</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="first-name">First Name <span class="required">*</span></label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="middle-name">Middle Name</label>
+                <input type="text" id="middle-name" name="middle-name">
+            </div>
+            <div class="form-group">
+                <label for="surname">Surname <span class="required">*</span></label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Gender <span class="required">*</span></label>
+            <input type="radio" id="male" name="gender" value="Male" required> Male
+            <input type="radio" id="female" name="gender" value="Female" required> Female
+        </div>
+
+        <div class="form-group">
+            <label for="birth-date">Birth Date <span class="required">*</span></label>
+            <input type="date" id="birth-date" name="birth-date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address <span class="required">*</span></label>
+            <input type="text" id="address" name="address" placeholder="Street Address" required>
+            <input type="text" name="address-line-2" placeholder="Street Address Line 2">
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="suburb">Suburb</label>
+                <input type="text" id="suburb" name="suburb">
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state">
+            </div>
+            <div class="form-group">
+                <label for="postcode">Postcode</label>
+                <input type="text" id="postcode" name="postcode">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="home-phone">Home Phone <span class="required">*</span></label>
+                <input type="tel" id="home-phone" name="home-phone" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile-phone">Mobile Phone <span class="required">*</span></label>
+                <input type="tel" id="mobile-phone" name="mobile-phone" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Are you an Australian? <span class="required">*</span></label>
+            <input type="radio" id="yes-australian" name="australian" value="Yes" required> Yes
+            <input type="radio" id="no-australian" name="australian" value="No" required> No
+        </div>
+
+        <div class="form-group">
+            <label>Do you have a working visa? <span class="required">*</span></label>
+            <input type="radio" id="yes-visa" name="visa" value="Yes" required> Yes
+            <input type="radio" id="no-visa" name="visa" value="No" required> No
+        </div>
+
+        <div class="section-title">Employment Details</div>
+
+        <div class="form-group">
+            <label for="job-title">Job Title <span class="required">*</span></label>
+            <input type="text" id="job-title" name="job-title" required>
+        </div>
+
+        <div class="form-group">
+            <label for="commencement-date">Commencement Date <span class="required">*</span></label>
+            <input type="date" id="commencement-date" name="commencement-date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="file-tax-number">File Tax Number</label>
+            <input type="text" id="file-tax-number" name="file-tax-number">
+        </div>
+
+        <div class="form-group">
+            <label>Employment Status <span class="required">*</span></label>
+            <input type="radio" id="full-time" name="employment-status" value="Full Time" required> Full Time
+            <input type="radio" id="part-time" name="employment-status" value="Part Time" required> Part Time
+            <input type="radio" id="temporary" name="employment-status" value="Temporary" required> Temporary
+            <input type="radio" id="casual" name="employment-status" value="Casual" required> Casual
+        </div>
+
+        <div class="section-title">Emergency Contact Details</div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="emergency-title">Title <span class="required">*</span></label>
+                <select name="emergency-title" id="emergency-title" required>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Ms">Ms</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="emergency-first-name">First Name <span class="required">*</span></label>
+                <input type="text" id="emergency-first-name" name="emergency-first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="emergency-middle-name">Middle Name</label>
+                <input type="text" id="emergency-middle-name" name="emergency-middle-name">
+            </div>
+            <div class="form-group">
+                <label for="emergency-surname">Surname <span class="required">*</span></label>
+                <input type="text" id="emergency-surname" name="emergency-surname" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="emergency-relationship">Relationship <span class="required">*</span></label>
+            <input type="text" id="emergency-relationship" name="emergency-relationship" required>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="emergency-home-phone">Home Phone <span class="required">*</span></label>
+                <input type="tel" id="emergency-home-phone" name="emergency-home-phone" required>
+            </div>
+            <div class="form-group">
+                <label for="emergency-mobile-phone">Mobile Phone <span class="required">*</span></label>
+                <input type="tel" id="emergency-mobile-phone" name="emergency-mobile-phone" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="emergency-email">Email Address <span class="required">*</span></label>
+            <input type="email" id="emergency-email" name="emergency-email" required>
+        </div>
+
+        <div class="section-title">Banking Details</div>
+
+        <div class="form-group">
+            <label for="bank-name">Bank Name <span class="required">*</span></label>
+            <input type="text" id="bank-name" name="bank-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bank-branch">Bank Branch <span class="required">*</span></label>
+            <input type="text" id="bank-branch" name="bank-branch" required>
+        </div>
+
+        <div class="form-group">
+            <label for="account-name">Account Name <span class="required">*</span></label>
+            <input type="text" id="account-name" name="account-name" required>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="account-number">Account Number <span class="required">*</span></label>
+                <input type="text" id="account-number" name="account-number" required>
+            </div>
+            <div class="form-group">
+                <label for="bsb-number">BSB Number <span class="required">*</span></label>
+                <input type="text" id="bsb-number" name="bsb-number" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="employee-signature">Employee Signature <span class="required">*</span></label>
+            <textarea id="employee-signature" name="employee-signature" placeholder="Print your name here" required></textarea>
+            <input type="date" name="date" placeholder="Enter date here" required>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
